@@ -79,6 +79,9 @@ RUN pip install --upgrade --force-reinstall xformers==0.0.18 torch torchvision t
 
 RUN apt clean && rm -rf /var/lib/apt/lists/* &&  echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && apt update
 
+RUN wget https://civitai.com/api/download/models/29460 --content-disposition -P /workspace/stable-diffusion-webui/models/Stable-diffusion/realisticVisionV20_v20.safetensors
+
+WORKDIR /workspace/stable-diffusion-webui
 ADD relauncher.py .
 ADD webui-user.sh .
 ADD start.sh /start.sh
