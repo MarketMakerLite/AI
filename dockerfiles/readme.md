@@ -10,5 +10,5 @@ docker push <User>/<Image>:<Ver>
 
 To add additional models, copy the format of line 82 in the Dockerfile
 ```shell
-ADD https://civitai.com/api/download/models/<Model ID> ./models/Stable-diffusion/<Model Name>
+ADD https://civitai.com/api/download/models/<Model ID> ./models/Stable-diffusion/<Model Name>.<Model Extension>
 ```
